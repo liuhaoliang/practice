@@ -14,10 +14,10 @@ def add(path, content):
 
 def fun_timer():
     now_time = "{}".format(datetime.datetime.now())
-    print('hello timer')
+    print(now_time)
     add(path, now_time)
-    log = os.system(r"py log.py && git add . && git commit -m sss && git push")
+    os.system(r"py log.py && git add . && git commit -m sss && git push")
 
 
-timer = threading.Timer(6, fun_timer)  # 首次启动
+timer = threading.Timer(60*60, fun_timer)
 timer.start()
