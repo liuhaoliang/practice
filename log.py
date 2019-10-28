@@ -16,8 +16,8 @@ def fun_timer():
     now_time = "{}".format(datetime.datetime.now())
     print(now_time)
     add(path, now_time)
-    os.system(r"py log.py && git add . && git commit -m sss && git push")
+    os.system(r"git add . && sleep 2s && git commit -m sss && sleep 2s && git push")
 
 
-timer = threading.Timer(60*60, fun_timer)
+timer = threading.Timer(20, fun_timer)
 timer.start()
